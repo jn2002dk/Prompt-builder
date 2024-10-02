@@ -234,7 +234,6 @@ document.getElementById('ai_random').addEventListener('click', function () {
 });
 
 document.getElementById('generate').addEventListener('click', function () {
-  // call generate function in main.py
   let answerstring = '';
   const options = {
     method: 'POST',
