@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Prompt builder",
+  "version": "1.0",
+  "web_accessible_resources": ["data.json", "randompromptdata.json", "api.json"],
+  "description": "A tool to generate image prompts from keywords using Perplexity AI",
+  "permissions": ["activeTab"],
+  
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["main.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "128": "images/icon128.png"
+    }
+  }
+}
