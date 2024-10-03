@@ -6,7 +6,9 @@ Prompt builder is a browser extension that generates random or controlled image 
 ![screenshot1](https://github.com/user-attachments/assets/d37f087c-aaab-404d-91da-1b2bd34d9e8c)
 
 
-To install it, download the archive or clone the repo, enable developer mode in your browser and under manage extensions, select load unpacked extension. In the file dialog, select the root directory of the extension
+To install it, download the archive or clone the repo, enable developer mode in your browser and under manage extensions, select load unpacked extension. In the file dialog, select the root directory of the extension. Click the extension icon to open it
+![image](https://github.com/user-attachments/assets/cbde3571-8c3e-4b83-9259-9129cacd7c17)
+
 
 The data for the dropdowns and the random prompt generation is stored in data.json and randompromptdata.json. You can add or delete items here for each dropdown
 
