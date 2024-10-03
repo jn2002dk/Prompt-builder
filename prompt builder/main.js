@@ -21,6 +21,7 @@ window.onload = function () {
       populateDropdown('dropdown8', dropdownData.dropdown8);
       populateDropdown('dropdown9', dropdownData.dropdown9);
       populateDropdown('dropdown10', dropdownData.dropdown10);
+      populateDropdown('dropdown11', dropdownData.dropdown11);
     })
     .catch(error => console.error('Error loading data:', error));
   fetch(chrome.runtime.getURL('randompromptdata.json'))
@@ -168,6 +169,19 @@ document.getElementById('dropdown10').addEventListener('change', function () {
   }
 });
 
+document.getElementById('dropdown11').addEventListener('change', function () {
+  const selectedValue = getDropdownValue('dropdown11');
+  // Save the selected value to a variable
+  const currentValue = document.getElementById('prompt').value;
+  // Set the value of the input with id="prompt" to the selected value
+  if (currentValue === '') {
+    document.getElementById('prompt').value = selectedValue;
+  }
+  else {
+    document.getElementById('prompt').value = currentValue + "," + selectedValue;
+  }
+});
+
 document.getElementById('clear').addEventListener('click', function () {
   document.getElementById('prompt').value = '';
   // set dropdown index to 0
@@ -234,6 +248,7 @@ document.getElementById('ai_random').addEventListener('click', function () {
 });
 
 document.getElementById('generate').addEventListener('click', function () {
+  // call generate function in main.py
   let answerstring = '';
   const options = {
     method: 'POST',
